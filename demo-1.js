@@ -1,3 +1,7 @@
+/*
+https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
+modified by olmen
+*/
 (function() {
   var width,
     height,
