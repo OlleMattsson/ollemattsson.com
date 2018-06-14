@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans" rel="stylesheet">
@@ -6,24 +7,24 @@
     <title>OlleMattsson.com</title>
 
     <style>
-
         body {
             font-family: 'Quattrocento Sans', sans-serif;
-            margin:0px;
-            padding:0px;
-            width:100%;
-            height:100%;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
             overflow: scroll;
         }
 
         h1 {
             font-size: 80px;
-            margin:200px 0px 100px 0px;
+            margin: 200px 0px 0px 0px;
             font-family: 'Quattrocento', serif;
             text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
         }
+
         h2 {
-            margin: 0px 0px 50px 0px;
+            margin: 0px 0px 0px 0px;
         }
 
         h3 {
@@ -31,57 +32,126 @@
         }
 
         hr {
-            margin: 60px 30px 60px 30px;
+            margin: 100px 50px;
         }
 
 
-        .line {
-            height:100%;
-            background:cornflowerblue;
-            width:4px;
-            margin-left:33%;
-            float:left;
-
+        #line {
+            flex: 1;
+            height: 100%;
+            width: 4px;
+            border-right: 1px solid black;
         }
 
-        .content {
-            float:left;
-            margin: 0px 30px 0px 30px;
-            width: 500px;
+        .gradient1 {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4d5ca0+0,4971c1+100 */
+            background: #4d5ca0;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #4d5ca0 0%, #4971c1 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #4d5ca0 0%, #4971c1 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #4d5ca0 0%, #4971c1 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d5ca0', endColorstr='#4971c1', GradientType=0);
+            /* IE6-9 */
         }
 
-        #social {
-            height: auto; 
-            width: auto; 
-            max-width: 64px; 
+        #content {
+            flex: 2;
+            margin: 0px 30px 0px 60px;
+        }
+
+        #socialContainer {
+            max-width: 550px;
+            text-align: center;
+        }
+
+        .socialImg {
+            height: auto;
+            width: auto;
+            max-width: 64px;
             max-height: 64px;
-            margin: 0px 20px 0px 20px;
+            margin: 100px 20px 100px 20px;
         }
 
+        a {
+            text-decoration: none;
+        }
+
+        #flexContainer {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+
+        #portfolioContainer a {
+            text-decoration: none;
+        }
+
+        #portfolioContainer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3755091-6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-3755091-6');
+</script>
+
+
 <body>
-<div class="line">
-</div>
-<div class="content">
-    <h1>Olle Mattsson</h1>
-    <!--<h2>olle.mattsson (at) gmail.com</h2>-->
 
-    <h3>Portfolio</h2>
-    
-    <p><a href="http://www.ollemattsson.com/yj" target="_blank">Quantum Yi Jing</a> - Divination with mystical, spooky, quantum random numbers</p>
-    <p><a href="http://www.infinitewhiteboard.com" target="_blank">www.infinitewhiteboard.com</a> - a social drawing experience for the web</p>
 
-    <hr>
 
-    <div style="text-align:center;">
-        <a href="http://www.github.com/ollemattsson" target="_blank" alt="github"><img id="social" src="github.png" style="size:50%"></a>
-        <a href="https://www.linkedin.com/in/olle-e-mattsson-2164ba29" target="_blank" alt="linkedin"><img id="social" src="linkedin.png" style="size:50%"></a>
+    <div id="flexContainer">
+        <div id="line" class="gradient1">
+            <div id="large-header" class="large-header" style="height: 100%; width: 100%;">
+                <canvas id="demo-canvas" height="100%"></canvas>
+            </div>
+        </div>
+        <div id="content">
+            <h1>Olle Mattsson</h1>
+            <h2>Software enthusiast | Fullstack Developer | Freelancer</h2>
+            <!--<h2>olle.mattsson (at) gmail.com</h2>-->
 
+            <div id="socialContainer">
+                <a href=" http://www.github.com/ollemattsson " target="_blank " alt="github ">
+                    <img class="socialImg" src="github.png ">
+                </a>
+                <a href="https://www.linkedin.com/in/olle-e-mattsson-2164ba29 " target="_blank " alt="linkedin ">
+                    <img class="socialImg" src="linkedin.png ">
+                </a>
+
+            </div>
+
+            <div id="portfolioContainer">
+
+                <h3>Portfolio</h2>
+                    <p>
+                        <a href="http://www.ollemattsson.com/yj " target="_blank ">Quantum Yi Jing</a> - Divination with mystical, spooky, quantum random numbers
+                    </p>
+                    <p>
+                        <a href="http://www.infinitewhiteboard.com " target="_blank ">www.infinitewhiteboard.com</a> - a social drawing experience for the web
+                    </p>
+            </div>
+
+
+
+
+        </div>
     </div>
 
-</div>
 
 
 </body>
+<script src="TweenLite.min.js"></script>
+<script src="EasePack.min.js"></script>
+<script src="demo-1.js"></script>
+
 </html>
